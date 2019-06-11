@@ -402,7 +402,7 @@
 
 "@babel/plugin-transform-modules-amd@^7.2.0":
   version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.2.0.tgz#82a9bce45b95441f617a24011dc89d12da7f4ee6"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-blocks-amd/-/plugin-transform-blocks-amd-7.2.0.tgz#82a9bce45b95441f617a24011dc89d12da7f4ee6"
   integrity sha512-mK2A8ucqz1qhrdqjS9VMIDfIvvT2thrEsIQzbaTdc5QFzhDjQv2CkJJ5f6BXIkgbmaoax3zBr2RyvV/8zeoUZw==
   dependencies:
     "@babel/helper-module-transforms" "^7.1.0"
@@ -410,7 +410,7 @@
 
 "@babel/plugin-transform-modules-commonjs@^7.4.4":
   version "7.4.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.4.4.tgz#0bef4713d30f1d78c2e59b3d6db40e60192cac1e"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-blocks-commonjs/-/plugin-transform-blocks-commonjs-7.4.4.tgz#0bef4713d30f1d78c2e59b3d6db40e60192cac1e"
   integrity sha512-4sfBOJt58sEo9a2BQXnZq+Q3ZTSAUXyK3E30o36BOGnJ+tvJ6YSxF0PG6kERvbeISgProodWuI9UVG3/FMY6iw==
   dependencies:
     "@babel/helper-module-transforms" "^7.4.4"
@@ -419,7 +419,7 @@
 
 "@babel/plugin-transform-modules-systemjs@^7.4.4":
   version "7.4.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-systemjs/-/plugin-transform-modules-systemjs-7.4.4.tgz#dc83c5665b07d6c2a7b224c00ac63659ea36a405"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-blocks-systemjs/-/plugin-transform-blocks-systemjs-7.4.4.tgz#dc83c5665b07d6c2a7b224c00ac63659ea36a405"
   integrity sha512-MSiModfILQc3/oqnG7NrP1jHaSPryO6tA2kOMmAQApz5dayPxWiHqmq4sWH2xF5LcQK56LlbKByCd8Aah/OIkQ==
   dependencies:
     "@babel/helper-hoist-variables" "^7.4.4"
@@ -427,7 +427,7 @@
 
 "@babel/plugin-transform-modules-umd@^7.2.0":
   version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-umd/-/plugin-transform-modules-umd-7.2.0.tgz#7678ce75169f0877b8eb2235538c074268dd01ae"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-blocks-umd/-/plugin-transform-blocks-umd-7.2.0.tgz#7678ce75169f0877b8eb2235538c074268dd01ae"
   integrity sha512-BV3bw6MyUH1iIsGhXlOK6sXhmSarZjtJ/vMiD9dNmpY8QXFFQTj+6v92pcfy1iqa8DeAfJFwoxcrS/TUZda6sw==
   dependencies:
     "@babel/helper-module-transforms" "^7.1.0"
@@ -561,10 +561,10 @@
     "@babel/plugin-transform-function-name" "^7.4.4"
     "@babel/plugin-transform-literals" "^7.2.0"
     "@babel/plugin-transform-member-expression-literals" "^7.2.0"
-    "@babel/plugin-transform-modules-amd" "^7.2.0"
-    "@babel/plugin-transform-modules-commonjs" "^7.4.4"
-    "@babel/plugin-transform-modules-systemjs" "^7.4.4"
-    "@babel/plugin-transform-modules-umd" "^7.2.0"
+    "@babel/plugin-transform-blocks-amd" "^7.2.0"
+    "@babel/plugin-transform-blocks-commonjs" "^7.4.4"
+    "@babel/plugin-transform-blocks-systemjs" "^7.4.4"
+    "@babel/plugin-transform-blocks-umd" "^7.2.0"
     "@babel/plugin-transform-named-capturing-groups-regex" "^7.4.5"
     "@babel/plugin-transform-new-target" "^7.4.4"
     "@babel/plugin-transform-object-super" "^7.2.0"
@@ -1864,10 +1864,10 @@ css-loader@^2.1.1:
     loader-utils "^1.2.3"
     normalize-path "^3.0.0"
     postcss "^7.0.14"
-    postcss-modules-extract-imports "^2.0.0"
-    postcss-modules-local-by-default "^2.0.6"
-    postcss-modules-scope "^2.1.0"
-    postcss-modules-values "^2.0.0"
+    postcss-blocks-extract-imports "^2.0.0"
+    postcss-blocks-local-by-default "^2.0.6"
+    postcss-blocks-scope "^2.1.0"
+    postcss-blocks-values "^2.0.0"
     postcss-value-parser "^3.3.0"
     schema-utils "^1.0.0"
 
@@ -2862,7 +2862,7 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.1.2, glob@^7.1.3, glob@~7.1.1:
 
 global-modules@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/global-modules/-/global-modules-1.0.0.tgz#6d770f0eb523ac78164d72b5e71a8877265cc3ea"
+  resolved "https://registry.yarnpkg.com/global-blocks/-/global-blocks-1.0.0.tgz#6d770f0eb523ac78164d72b5e71a8877265cc3ea"
   integrity sha512-sKzpEkf11GpOFuw0Zzjzmt4B4UZwjOcG757PPvrfhxcLFbq0wpsgpOqxpxtxFiCG4DtG93M6XRVbF2oGdev7bg==
   dependencies:
     global-prefix "^1.0.1"
@@ -4962,14 +4962,14 @@ postcss-minify-selectors@^4.0.2:
 
 postcss-modules-extract-imports@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-2.0.0.tgz#818719a1ae1da325f9832446b01136eeb493cd7e"
+  resolved "https://registry.yarnpkg.com/postcss-blocks-extract-imports/-/postcss-blocks-extract-imports-2.0.0.tgz#818719a1ae1da325f9832446b01136eeb493cd7e"
   integrity sha512-LaYLDNS4SG8Q5WAWqIJgdHPJrDDr/Lv775rMBFUbgjTz6j34lUznACHcdRWroPvXANP2Vj7yNK57vp9eFqzLWQ==
   dependencies:
     postcss "^7.0.5"
 
 postcss-modules-local-by-default@^2.0.6:
   version "2.0.6"
-  resolved "https://registry.yarnpkg.com/postcss-modules-local-by-default/-/postcss-modules-local-by-default-2.0.6.tgz#dd9953f6dd476b5fd1ef2d8830c8929760b56e63"
+  resolved "https://registry.yarnpkg.com/postcss-blocks-local-by-default/-/postcss-blocks-local-by-default-2.0.6.tgz#dd9953f6dd476b5fd1ef2d8830c8929760b56e63"
   integrity sha512-oLUV5YNkeIBa0yQl7EYnxMgy4N6noxmiwZStaEJUSe2xPMcdNc8WmBQuQCx18H5psYbVxz8zoHk0RAAYZXP9gA==
   dependencies:
     postcss "^7.0.6"
@@ -4978,7 +4978,7 @@ postcss-modules-local-by-default@^2.0.6:
 
 postcss-modules-scope@^2.1.0:
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-modules-scope/-/postcss-modules-scope-2.1.0.tgz#ad3f5bf7856114f6fcab901b0502e2a2bc39d4eb"
+  resolved "https://registry.yarnpkg.com/postcss-blocks-scope/-/postcss-blocks-scope-2.1.0.tgz#ad3f5bf7856114f6fcab901b0502e2a2bc39d4eb"
   integrity sha512-91Rjps0JnmtUB0cujlc8KIKCsJXWjzuxGeT/+Q2i2HXKZ7nBUeF9YQTZZTNvHVoNYj1AthsjnGLtqDUE0Op79A==
   dependencies:
     postcss "^7.0.6"
@@ -4986,7 +4986,7 @@ postcss-modules-scope@^2.1.0:
 
 postcss-modules-values@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-modules-values/-/postcss-modules-values-2.0.0.tgz#479b46dc0c5ca3dc7fa5270851836b9ec7152f64"
+  resolved "https://registry.yarnpkg.com/postcss-blocks-values/-/postcss-blocks-values-2.0.0.tgz#479b46dc0c5ca3dc7fa5270851836b9ec7152f64"
   integrity sha512-Ki7JZa7ff1N3EIMlPnGTZfUMe69FFwiQPnVSXC9mnn3jozCRBYIxiZd44yJOV2AmabOo4qFf8s0dC/+lweG7+w==
   dependencies:
     icss-replace-symbols "^1.1.0"
@@ -5549,7 +5549,7 @@ resolve-dir@^1.0.0, resolve-dir@^1.0.1:
   integrity sha1-eaQGRMNivoLybv/nOcm7U4IEb0M=
   dependencies:
     expand-tilde "^2.0.0"
-    global-modules "^1.0.0"
+    global-blocks "^1.0.0"
 
 resolve-from@^3.0.0:
   version "3.0.0"
@@ -6667,7 +6667,7 @@ webpack-cli@^3.3.2:
     cross-spawn "^6.0.5"
     enhanced-resolve "^4.1.0"
     findup-sync "^2.0.0"
-    global-modules "^1.0.0"
+    global-blocks "^1.0.0"
     import-local "^2.0.0"
     interpret "^1.1.0"
     loader-utils "^1.1.0"
