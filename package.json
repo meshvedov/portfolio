@@ -11,14 +11,7 @@
     "> 1%",
     "last 3 version"
   ],
-  "author": "https://github.com/vedees",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vedees/webpack-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vedees/webpack-template/issues"
-  },
+  "author": "Mikhail Shvedov",
   "keywords": [
     "webpack",
     "webpack4",
