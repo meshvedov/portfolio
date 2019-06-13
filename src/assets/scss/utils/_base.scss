@@ -8,8 +8,6 @@
 
 html {
     box-sizing: border-box;
-    font-size: $mainFontSize;
-    color: $mainFontColor;
     //height: 100%;
     @media screen and (max-width: $desktopWidth) {
         font-size: 16px;
@@ -25,6 +23,9 @@ html {
 body {
     margin: 0;
     padding: 0;
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -45,14 +46,15 @@ img {
 .container {
     width: 100%;
     margin: 0 auto;
-    max-width: $desktopWidth;
-    @media screen and (max-width: $smDesktopWidth) { // 980px
-        max-width: $tableWidth;                         // 768px
+    padding-left: 2em;
+    padding-right: 2em;
+    @media screen and (max-width: $smDesktopWidth) { // 1200px
+
     }
     @media screen and (max-width: $tableWidth) {  //768px
-        max-width: $phoneWidth;                     //480px
+
     }
-    @media screen and (max-width: $phoneWidth) { //480px
-        max-width: $smPhoneWidth;                   //320px
+    @media screen and (max-width: $phoneWidth) { //320px
+
     }
 }
