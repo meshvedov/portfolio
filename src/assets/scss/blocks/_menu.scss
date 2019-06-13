@@ -1,6 +1,13 @@
 .menu {
+    display: inline-block;
 
-    &__svg {
+    &__link > img {
+        height: 2.19em;
+        width: 2.5em;
 
+        @media (max-width: $phoneWidth) {
+            height: 1.64em;
+            width: 1.86em;
+        }
     }
 }

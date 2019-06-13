@@ -9,15 +9,7 @@
 html {
     box-sizing: border-box;
     //height: 100%;
-    @media screen and (max-width: $desktopWidth) {
-        font-size: 16px;
-    }
-    @media screen and (max-width: $tableWidth) {
-        font-size: 15px;
-    }
-    @media screen and (max-width: $phoneWidth) {
-        font-size: 14px;
-    }
+
 }
 
 body {
@@ -26,6 +18,13 @@ body {
     font-family: $mainFont;
     font-size: $mainFontSize;
     color: $mainFontColor;
+
+    @media screen and (max-width: $tableWidth) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -55,6 +54,7 @@ img {
 
     }
     @media screen and (max-width: $phoneWidth) { //320px
-
+        padding-left: 0.71em;
+        padding-right: .71em;
     }
 }

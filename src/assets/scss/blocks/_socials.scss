@@ -1,4 +1,5 @@
 .socials {
+    display: inline-block;
 
     .socials__list {
         display: flex;
@@ -7,5 +8,9 @@
 
     &__item:not(:last-child) {
         margin-right: 1.8em;
+    }
+
+    &__link > img {
+        height: 17px;
     }
 }
