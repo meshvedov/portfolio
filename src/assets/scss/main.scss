@@ -1,8 +1,8 @@
-@import "utils/libs";
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
+@import "utils/base";
 
-
-// Modules
-@import "blocks/wrapper.scss";
+@import "blocks/header";
+@import "blocks/socials";
+@import "blocks/menu";
