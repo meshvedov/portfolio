@@ -8,8 +8,6 @@
 
 html {
     box-sizing: border-box;
-    //height: 100%;
-
 }
 
 body {
@@ -19,15 +17,27 @@ body {
     font-size: $mainFontSize;
     color: $mainFontColor;
 
-    @media screen and (max-width: $tableWidth) {
+    @media screen and (max-width: $tableWidth) { //768px
         font-size: 15px;
     }
-    @media screen and (max-width: $phoneWidth) {
+    @media screen and (max-width: $phoneWidth) { //320px
         font-size: 14px;
     }
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+h1 {
+    font-size: 3.93rem;
+}
+
+h2 {
+    font-size: 2.19rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
 
 a { text-decoration: none; }
 
@@ -40,21 +50,4 @@ ul, li {
 
 img {
     max-width: 100%;
-}
-
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding-left: 2em;
-    padding-right: 2em;
-    @media screen and (max-width: $smDesktopWidth) { // 1200px
-
-    }
-    @media screen and (max-width: $tableWidth) {  //768px
-
-    }
-    @media screen and (max-width: $phoneWidth) { //320px
-        padding-left: 0.71em;
-        padding-right: .71em;
-    }
 }

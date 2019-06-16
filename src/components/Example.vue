@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container">
+    <div class="header__wrapper">
       <h1>Vue message 2: {{ message }}</h1>
     </div>
   </section>

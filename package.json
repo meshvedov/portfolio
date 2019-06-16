@@ -48,6 +48,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "svg-sprite-generator": "^0.0.7",
     "vue": "^2.6.10",
     "vuex": "^3.1.1"
   }

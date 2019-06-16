@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="stylesheet" type="text/css" href="src/assets/scss/blocks/_banner.scss"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,35 +9,61 @@
     <title>Portfolio | MSH</title>
 </head>
 <body>
+<!--Header-->
     <header class="header" id="header">
-        <div class="container">
+        <div class="header__wrapper">
             <nav class="navigation">
                 <div class="socials">
                     <ul class="socials__list">
                         <li class="socials__item">
                             <a href="#" class="socials__link" target="_blank">
-                                <img src="assets/img/icons/vk.svg" alt="В контакте">
+                                <svg class="socials__svg socials__svg--vk">
+                                    <use xlink:href=assets/img/icons/sprite.svg#vk></use>
+                                </svg>
                             </a>
                         </li>
                         <li class="socials__item">
                             <a href="#" class="socials__link" target="_blank">
-                                <img src="assets/img/icons/github.svg" alt="GitHub">
+                                <svg class="socials__svg socials__svg--github">
+                                    <use xlink:href=assets/img/icons/sprite.svg#github></use>
+                                </svg>
                             </a>
                         </li>
                         <li class="socials__item">
                             <a href="#" class="socials__link" target="_blank">
-                                <img src="assets/img/icons/in.svg" alt="In">
+                                <svg class="socials__svg socials__svg--in">
+                                    <use xlink:href=assets/img/icons/sprite.svg#in></use>
+                                </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
-
                 <div class="menu">
                     <a href="#" class="menu__link">
-                        <img src="assets/img/icons/hamburger.svg" alt="Menu">
+                        <svg class="menu__svg">
+                            <use xlink:href="assets/img/icons/sprite.svg#hamburger"></use>
+                        </svg>
                     </a>
                 </div>
             </nav>
+            <div class="banner">
+                <img src="assets/img/fashmark-men-trends-nature.png" alt="Image" class="banner__img">
+                <h2 class="banner__name">Владимир Астахов</h2>
+                <p class="banner__text">Личный сайт веб разработчика</p>
+                <a href="#" class="banner__link">
+                    <svg class="banner__arrow-down">
+                        <use xlink:href="assets/img/icons/sprite.svg#arrow_down"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="header__bg">
+            <svg class="header__bg--left">
+                <use xlink:href="assets/img/icons/sprite.svg#about_bg_left"></use>
+            </svg>
+            <svg class="header__bg--right">
+                <use xlink:href="assets/img/icons/sprite.svg#about_bg_right"></use>
+            </svg>
         </div>
     </header>
 </body>

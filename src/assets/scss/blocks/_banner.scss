@@ -1,0 +1,38 @@
+.banner {
+  display: block;
+  //background: orangered;
+  //margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  padding-top: 5.1em;
+
+  @media screen and (max-width: $tableWidth) {
+    padding-top: 3.3em;
+  }
+
+  @include respond(phone) {
+    padding-top: 5.6em;
+  }
+
+  &__name {
+    font-family: 'RobotoMedium', sans-serif;
+    margin-top: .5em;
+    margin-bottom: .1em;
+
+    @include respond(phone) {
+      font-size: 1.5em;
+      margin-top: 1.3em;
+      margin-bottom: .4em;
+    }
+  }
+
+  &__text {
+    margin-bottom: 8.4em;
+  }
+
+  &__arrow-down {
+    fill: #fff;
+    width: 1.56em;
+    height: 1em;
+  }
+}
