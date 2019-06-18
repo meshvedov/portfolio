@@ -1,20 +1,40 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="icon", type="image/png", href="fav_forest.png")
-        title Portfolio | main page
-    body
-        .wrapper
-            section.section.hero
-                ul.socials
-                    each item in ['vk', 'gh', 'in']
-                        li.socials__item
-                            a(href="" class=`socials__link socials__link_${item}`)
-                a(href="").hamburger
-                a(href="").down-arrow
-
-            section.section.about
-            section.section.map
+doctype html(lang='ru')
+head
+    meta(charset='UTF-8')
+    |
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    |
+    link(rel='shortcut icon', type='image/png', href='fav_forest.png')
+    |
+    title Portfolio | MSH
+body
+    // Header
+    header#header.header
+        .header__wrapper
+            nav.navigation
+                .socials
+                    ul.socials__list
+                        each val in ['vk', 'github', 'in']
+                            li.socials__item
+                                a.socials__link(href='#', target='_blank')
+                                    svg(class="socials__svg socials__svg--"+val)
+                                        use(xlink:href='assets/img/icons/sprite.svg#'+val)
+                |
+                .menu
+                    a.menu__link(href='#')
+                        svg.menu__svg
+                            use(xlink:href='assets/img/icons/sprite.svg#hamburger')
+            |
+            .banner
+                img.banner__img(src='assets/img/fashmark-men-trends-nature.png', alt='Image')
+                |
+                h2.banner__name Владимир Астахов
+                |
+                p.banner__text Личный сайт веб разработчика
+                |
+                a.banner__link(href='#')
+                    svg.banner__arrow-down
+                        use(xlink:href='assets/img/icons/sprite.svg#arrow_down')
+    

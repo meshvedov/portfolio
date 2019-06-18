@@ -2,25 +2,6 @@
 .header {
     position: relative;
     background: $color-green-light url("/assets/img/water.jpg") no-repeat center / cover;
-
-    &__bg {
-        position: absolute;
-        bottom: -52.5em;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        width: 100%;
-        height: 63em;
-        &--left {
-            flex-grow: 1;
-            //height: 63em;
-        }
-
-        &--right {
-            flex-grow: 1;
-            //height: 63em;
-        }
-    }
 }
 
 .header__wrapper {
