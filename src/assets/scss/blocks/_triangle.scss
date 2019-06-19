@@ -1,0 +1,12 @@
+.triangle {
+    height: 6.25em;
+    flex-grow: 1;
+
+    &--white {
+        fill: #000;
+    }
+
+    &--beige {
+        fill: #f4f5f0;
+    }
+}

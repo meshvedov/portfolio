@@ -21,6 +21,20 @@
     }
 }
 
+.header__decor {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+
+    @include respond(phone) {
+        & > img {
+            display: none;
+        }
+    }
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;

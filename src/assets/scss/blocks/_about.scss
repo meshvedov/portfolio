@@ -1,0 +1,32 @@
+.about {
+    height: 100px;
+    position: relative;
+    display: flex;
+
+    @include respond(tab) {
+        flex-direction: column;
+    }
+}
+
+.about__triangles {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 100%;
+}
+
+.about__left {
+    background: orangered;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    position: relative;
+    height: 100%
+}
+
+.about__right {
+    background: green;
+    flex-grow: 1;
+    position: relative;
+    height: 100%;
+}
