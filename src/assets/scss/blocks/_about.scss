@@ -1,5 +1,4 @@
 .about {
-    height: 100px;
     position: relative;
     display: flex;
 
@@ -17,16 +16,24 @@
 
 .about__left {
     background: orangered;
-    flex-grow: 1;
-    flex-shrink: 0;
+    //flex-grow: 1;
+    flex-basis: 50%;
     display: flex;
+    padding: 1em;
+    justify-content: space-between;
     position: relative;
     height: 100%
 }
 
 .about__right {
     background: green;
-    flex-grow: 1;
+    //flex-grow: 1;
+    flex-basis: 50%;
     position: relative;
     height: 100%;
 }
+
+.wrapp {
+
+}
+
