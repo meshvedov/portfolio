@@ -1,15 +1,19 @@
-const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {VueLoaderPlugin} = require('vue-loader')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const path = require('path');
+const fs = require('fs');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {VueLoaderPlugin} = require('vue-loader');
+// const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
     dist: path.join(__dirname, '../dist'),
     assets: 'assets/'
-}
+};
+
+const PAGES_DIR = `${PATHS.src}/pug/pages/`;
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
 
 module.exports = {
     // BASE config
@@ -114,23 +118,28 @@ module.exports = {
         }
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].[hash].css`,
         }),
         // Copy HtmlWebpackPlugin and change index.html for another html page
-        new HtmlWebpackPlugin({
-            // template: `${PATHS.src}/index.html`,
-            template: `${PATHS.src}/main.pug`,
-            // filename: './index.html',
-            inject: true
-        }),
+        // new HtmlWebpackPlugin({
+        //     // template: `${PATHS.src}/index.html`,
+        //     template: `${PATHS.src}/index.pug`,
+        //     // filename: './index.html',
+        //     inject: true
+        // }),
         new CopyWebpackPlugin([
             {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
             {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
             {from: `${PATHS.src}/static`, to: ''},
             {from: `${PATHS.src}/${PATHS.assets}img/icons`, to: `${PATHS.assets}img/icons`}
-        ])
+        ]),
+
+        ...PAGES.map(page => new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/${page}`,
+            filename: `./${page.replace(/\.pug/,'.html')}`
+        }))
     ],
 }
