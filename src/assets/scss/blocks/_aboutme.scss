@@ -1,3 +1,33 @@
 .aboutme {
     flex-basis: 50%;
+
+    &__title {
+        font-family: 'SansusWeb';
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-grey-light;
+        text-align: center;
+        margin: 1.2em 0 1.4em;
+        position: relative;
+
+        &::after {
+            width: 89px;
+            height: 3px;
+            background: $color-grey-light;
+            content: '';
+            position: absolute;
+            bottom: -0.6em;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__text {
+        line-height: 1.5;
+        max-width: 25.94em;
+
+        &:not(:last-child) {
+            margin-bottom: .6em;
+        }
+    }
 }

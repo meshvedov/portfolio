@@ -15,7 +15,7 @@
 }
 
 .about__left {
-    background: orangered;//!!!!
+    background: #16ff006e;//!!!!
     flex-basis: 50%;
     display: flex;
     padding: 1em;
@@ -23,6 +23,7 @@
 
     @include respond(tab-land) {
         flex-direction: column;
+        align-items: center;
     }
 
     &-title {
@@ -31,7 +32,7 @@
 
         &-position {
             position: absolute;
-            top: -3.75em;
+            top: -3.5em;
             left: 50%;
             transform: translateX(-50%);
 

@@ -9,7 +9,7 @@
         color: $color-grey-dark;
         font-weight: 400;
         text-transform: uppercase;
-        transform: translateY(50%);
+        transform: translateY(80%);
 
         @include respond(tab) {
             font-size: 3.27em;
