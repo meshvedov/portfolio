@@ -15,25 +15,41 @@
 }
 
 .about__left {
-    background: orangered;
-    //flex-grow: 1;
+    background: orangered;//!!!!
     flex-basis: 50%;
     display: flex;
     padding: 1em;
     justify-content: space-between;
-    position: relative;
-    height: 100%
+
+    @include respond(tab-land) {
+        flex-direction: column;
+    }
+
+    &-title {
+        flex-basis: 50%;
+        position: relative;
+
+        &-position {
+            position: absolute;
+            top: -3.75em;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include respond(tab-land) {
+                position: static;
+                transform: translateX(0);
+                margin: 0 auto;
+                margin-bottom: 2.5em;
+            }
+        }
+    }
 }
 
 .about__right {
     background: green;
-    //flex-grow: 1;
     flex-basis: 50%;
     position: relative;
     height: 100%;
 }
 
-.wrapp {
-
-}
 

@@ -54,10 +54,15 @@ body
                 class="triangle triangle--beige")
                 polygon(points="0,100 1000,100 1000,0")
         .about__left
-            .title
-                h1 Обо мне
+            .about__left-title
+                .main-title.about__left-title-position
+                    h1 Обо мне
             .aboutme
-                img(src='./assets/img/men.jpg')
-
+                img(src='./assets/img/men.jpg' class='aboutme__img')
+                h2.aboutme__title Кто я
+                p.aboutme__text
+                | Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p.aboutme__text
+                | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         .about__right
             h2 Чем я могу быть вам полезен

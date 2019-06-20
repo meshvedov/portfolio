@@ -17,10 +17,11 @@ body {
     font-size: $mainFontSize;
     color: $mainFontColor;
 
-    @media screen and (max-width: $tableWidth) { //768px
+    @include respond(tab) {
         font-size: 15px;
     }
-    @media screen and (max-width: $phoneWidth) { //320px
+
+    @include respond(phone) {
         font-size: 14px;
     }
 }

@@ -1,0 +1,33 @@
+.main-title {
+    text-align: center;
+    background: url("/assets/img/decor/about_header.png") no-repeat center / contain;
+    width: 22.5em;
+    height: 7.8em;
+
+    & > h1 {
+        font-family: 'SansusWeb';
+        color: $color-grey-dark;
+        font-weight: 400;
+        text-transform: uppercase;
+        transform: translateY(50%);
+
+        @include respond(tab) {
+            font-size: 3.27em;
+        }
+
+        @include respond(phone) {
+            font-size: 35px;
+        }
+    }
+
+    &::after {
+        content: '';
+        background-color: $color-grey-dark;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 104%;
+        width: 89px;
+        height: 3px;
+    }
+}
