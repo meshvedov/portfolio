@@ -1,0 +1,25 @@
+.skills {
+
+  &__title {
+    font-weight: 400;
+  }
+
+  &__item {
+
+    &-svg {
+      width: 120px;
+      height: 120px;
+      fill: none;
+      stroke-width: 20px;
+      stroke: #dfdcd5;
+    }
+
+    &-sector {
+      stroke: $color-green-light;
+      stroke-dasharray: 252px;
+      stroke-dashoffset: 126px;
+      transform: rotate(-90deg);
+      transform-origin: 60px 60px;
+    }
+  }
+}

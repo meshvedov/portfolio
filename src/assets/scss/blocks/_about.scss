@@ -15,7 +15,7 @@
 }
 
 .about__left {
-    background: #16ff006e;//!!!!
+    background: $bg-color-about-left;//!!!!
     flex-basis: 50%;
     display: flex;
     padding: 1em;
@@ -29,6 +29,10 @@
     &-title {
         flex-basis: 50%;
         position: relative;
+
+        @include respond(tab-land) {
+            top: -3em;
+        }
 
         &-position {
             position: absolute;
@@ -47,10 +51,42 @@
 }
 
 .about__right {
-    background: green;
+    background: $bg-color-about-right;
     flex-basis: 50%;
-    position: relative;
+    //position: relative;
     height: 100%;
+    padding: 0.6em 5.5em 0 2em;
+
+    @include respond(tab-land) {
+        padding-right: 1.5em    ;
+    }
+
+    &-title {
+        margin: 0 auto;
+        text-align: center;
+        font-family: "SansusWeb";
+        font-weight: 400;
+        text-transform: uppercase;
+        max-width: 260px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background: $color-grey-light;
+            left: 50%;
+            bottom: -.7em;
+            transform: translateX(-50%);
+            width: 89px;
+            height: 3px;
+
+        }
+    }
+
+    &-text {
+        margin-top: 3em;
+        line-height: 1.5;
+    }
 }
 
 

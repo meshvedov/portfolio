@@ -2,11 +2,23 @@
     height: 10.25em;
     flex-grow: 1;
 
+    @include respond(tab-land) {
+        height: 6.25em;
+    }
+
+    @include respond(tab) {
+        height: 4.25em;
+    }
+
+    @include respond(phone) {
+        height: 2em;
+    }
+
     &--white {
-        fill: #000;
+        fill: $bg-color-about-left;
     }
 
     &--beige {
-        fill: #f4f5f0;
+        fill: $bg-color-about-right;
     }
 }
