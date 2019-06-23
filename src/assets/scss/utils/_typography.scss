@@ -4,6 +4,11 @@
     width: 22.5em;
     height: 7.8em;
 
+    @include respond(tab) {
+        width: 17em;
+        height: 6em;
+    }
+
     & > h1 {
         font-family: 'SansusWeb';
         color: $color-grey-dark;

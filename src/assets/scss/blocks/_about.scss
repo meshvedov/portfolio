@@ -26,12 +26,20 @@
         align-items: center;
     }
 
+    @include respond(tab) {
+        padding-bottom: 3em;
+    }
+
     &-title {
         flex-basis: 50%;
         position: relative;
 
         @include respond(tab-land) {
             top: -3em;
+        }
+
+        @include respond(tab) {
+            top: 0;
         }
 
         &-position {
@@ -53,12 +61,15 @@
 .about__right {
     background: $bg-color-about-right;
     flex-basis: 50%;
-    //position: relative;
-    //height: 100%;
     padding: 0.6em 5.5em 0 2em;
 
     @include respond(tab-land) {
-        padding-right: 1.5em    ;
+        padding-right: 0;
+    }
+
+    @include respond(tab) {
+        text-align: center;
+        padding: 3em 1em;
     }
 
     &-title {
@@ -87,6 +98,11 @@
         margin-top: 3em;
         margin-bottom: 3em;
         line-height: 1.5;
+
+        @include respond(tab) {
+            margin: 3em auto;
+            max-width: 505px;
+        }
     }
 }
 

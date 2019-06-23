@@ -20,5 +20,9 @@
 
     &--beige {
         fill: $bg-color-about-right;
+
+        @include respond(tab) {
+            fill: $bg-color-about-left;
+        }
     }
 }
