@@ -1,3 +1,5 @@
+include ../utils/mixins
+
 doctype html(lang='ru')
 head
     meta(charset='UTF-8')
@@ -67,12 +69,11 @@ body
         .about__right
             h2.about__right-title Чем я могу быть вам полезен
             p.about__right-text
-                | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+                | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            -arr1 = [{ name: 'HTML5', perc: '0.9'}, {name: 'CSS3', perc: '0.8'}, {name: 'JavaScript & jQuery', perc: '0.8'}]
+            -arr2 = [{name:'PHP', perc: '0.4', opac:'0.6'}, {name:'mySQL', perc: '0.6', opac:'0.6'}, {name:'Node.js & npm', perc: '0.4', opac:'0.6'}, {name:'Mongo.db', perc: '0.6', opac:'0.6'}]
+            -arr3 = [{name:'Git', perc: '0.8', opac:'0.9'}, {name:'Gulp', perc: '0.6', opac:'0.7'}, {name:'Bower', perc: '0.6', opac:'0.6'}]
             .skills
-                h3.skills__title Frontend
-                ul.skills__list
-                    li.skills__item
-                        h5.skills__item-name Html5
-                        svg.skills__item-svg
-                            circle(r="40" cx="60" cy="60")
-                            circle(r="40" cx="60" cy="60" class="skills__item-sector")
+                +skill('Frontend', arr1)
+                +skill('Backend', arr2)
+                +skill('WorkFlow', arr3)

@@ -2,9 +2,25 @@
 
   &__title {
     font-weight: 400;
+    margin-bottom: .625rem;
+
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__list {
+    //display: flex;
   }
 
   &__item {
+    display: inline-block;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 2.5em;
+    }
+
 
     &-svg {
       width: 120px;
@@ -16,10 +32,24 @@
 
     &-sector {
       stroke: $color-green-light;
-      stroke-dasharray: 252px;
-      stroke-dashoffset: 126px;
+      stroke-dasharray: 276px;
+      stroke-dashoffset: 138px;
       transform: rotate(-90deg);
       transform-origin: 60px 60px;
     }
+
+    &-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'RobotoMedium';
+      font-weight: 500;
+      color: $color-green-dark;
+      text-align: center;
+    }
   }
 }
+
+
+
