@@ -1,1 +1,37 @@
-// footer style
+.footer {
+
+  &__black {
+    background-color: rgb(55,62,66);
+    opacity: .85;
+    height: 147px;
+  }
+
+  &__green {
+    background-color: $color-green-light;
+    opacity: .85;
+    text-align: center;
+    padding: .3em 1em .6em;
+
+    @include respond(tab) {
+      padding: .4em 1em 1em;
+    }
+
+    &-text {
+      display: inline-block;
+      font-size: 15.77px;
+      font-family: 'RobotoLight';
+      color: #ffffff;
+      line-height: 1.5;
+
+      @include respond(tab) {
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 486px) {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+}

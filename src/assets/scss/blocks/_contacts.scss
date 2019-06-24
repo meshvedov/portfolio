@@ -1,6 +1,5 @@
 .contacts {
-  width: 380px;
-  //height: 312px;
+  max-width: 380px;
   border-radius: 5px;
   background-color: $bg-color-about-right;
   opacity: .851;
@@ -43,6 +42,7 @@
     }
 
     & > address {
+      color: rgba(69,90,100,.8);
       font-style: normal;
     }
   }
