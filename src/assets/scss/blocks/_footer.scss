@@ -1,9 +1,66 @@
 .footer {
 
-  &__black {
+  &-main {
     background-color: rgb(55,62,66);
     opacity: .85;
-    height: 147px;
+    //height: 147px;
+    padding: 1.87em;
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      flex-basis: 33%;
+      flex-grow: 1;
+    }
+
+    &__description {
+
+      border-right: 2px solid rgba(255,255,255, .2);
+
+      &-text {
+        font-family: 'RobotoLight';
+        color: #fff;
+        line-height: 1.5;
+        max-width: 350px;
+      }
+    }
+
+    &__nav {
+      //flex-grow: 1;
+      border-right: 2px solid rgba(255,255,255, .2);
+      padding-left: 1.75em;
+      padding-right: 1.75em;
+
+      .nav-menu {
+        display: flex;
+        font: 15.7px RobotoBold;
+        line-height: 1.5;
+
+        &__item:not(:last-child) {
+          margin-right: 2.25em;
+        }
+
+        &__link {
+          color: #ffffff;
+        }
+      }
+    }
+
+    &__quote {
+      //flex-grow: 1;
+      color: rgba(255,255,255,.5);
+      line-height: 1.625;
+      padding-left: 1.87em;
+
+      & > blockquote {
+        font-family: 'RobotoLightItalic';
+        max-width: 479px;
+      }
+
+      .sign {
+        font-family: 'RobotoBoldItalic';
+      }
+    }
   }
 
   &__green {
@@ -22,6 +79,7 @@
       font-family: 'RobotoLight';
       color: #ffffff;
       line-height: 1.5;
+      opacity: .85;
 
       @include respond(tab) {
         font-size: 14px;
