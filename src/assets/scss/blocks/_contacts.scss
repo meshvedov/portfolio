@@ -1,0 +1,59 @@
+.contacts {
+  width: 380px;
+  //height: 312px;
+  border-radius: 5px;
+  background-color: $bg-color-about-right;
+  opacity: .851;
+  padding: 1.7em 2.5em 2em ;
+
+  &__title {
+    font-family: 'SansusWeb';
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 89px;
+      height: 3px;
+      background-color: rgb(86,99,88);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -1.8rem;
+    }
+  }
+
+  &__list {
+    margin-top: 3.4em;
+    font-family: 'RobotoMedium';
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5em;
+    }
+
+    & > a {
+      color: rgba(69,90,100,.8);
+    }
+
+    & > address {
+      font-style: normal;
+    }
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+    fill: $color-green-light;
+  }
+
+  &__text {
+    margin-left: .6em;
+  }
+}

@@ -3,9 +3,9 @@ mixin skill(title, array)
     h3.skills__title= title
     ul.skills__list
         each el, index in array
-            - var perc = 6.28 * 44 * (1-el.perc)
+            - var perc = 6.28 * 44 * (1 - el.perc)
             - var opac = el.opac ? el.opac : 0.9
-            li.skills__item
+            li.skills__item(class=`${title.toLowerCase()}`)
                 h5(class="skills__item-name")= `${el.name}`
                 svg.skills__item-svg
                     circle(r="44" cx="60" cy="60")

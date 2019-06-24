@@ -18,6 +18,7 @@
 
         @include respond(tab) {
             font-size: 3.27em;
+            position: relative;
         }
 
         @include respond(phone) {
@@ -31,7 +32,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 104%;
+        bottom: -1.25em;
         width: 89px;
         height: 3px;
     }

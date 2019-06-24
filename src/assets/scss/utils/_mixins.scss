@@ -60,7 +60,7 @@
   }
 
   @if $breakpoin == tab {
-    @media only screen and (max-width:51.2em){ //768px
+    @media only screen and (max-width:51.2em){ //819px 768px
       @content
     };
   }

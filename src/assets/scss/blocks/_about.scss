@@ -24,6 +24,7 @@
     @include respond(tab-land) {
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
     }
 
     @include respond(tab) {
@@ -36,10 +37,12 @@
 
         @include respond(tab-land) {
             top: -3em;
+            flex-basis: auto;
         }
 
         @include respond(tab) {
             top: 0;
+            flex-basis: auto;
         }
 
         &-position {
@@ -61,7 +64,7 @@
 .about__right {
     background: $bg-color-about-right;
     flex-basis: 50%;
-    padding: 0.6em 5.5em 0 2em;
+    padding: 0.6em 5.5em 2.8em 2em;
 
     @include respond(tab-land) {
         padding-right: 0;

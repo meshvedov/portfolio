@@ -77,3 +77,30 @@ body
                 +skill('Frontend', arr1)
                 +skill('Backend', arr2)
                 +skill('WorkFlow', arr3)
+    //Location
+    section#location.location
+        .location__wrapper
+            .location__map
+            .contacts
+                h2.contacts__title Контакты
+                ul.contacts__list
+                    li.contacts__item
+                        svg.contacts__svg
+                            use(xlink:href='assets/img/icons/sprite.svg#skype')
+                        a.contacts__text(href='skype:skype_kdn?call' target='_blank')
+                            | skype_kdn
+                    li.contacts__item
+                        svg.contacts__svg(style={'height':'16px'})
+                            use(xlink:href='assets/img/icons/sprite.svg#envelope2')
+                        a.contacts__text(href='mailto:astahov@gmail.com' target='_blank')
+                            | astahov@gmail.com
+                    li.contacts__item
+                        svg.contacts__svg(style={'height': '20px', 'width':'19px'})
+                            use(xlink:href='assets/img/icons/sprite.svg#phone')
+                        a.contacts__text(href='tel:+79312009324' target='_blank')
+                            | +7 931 200 93 24
+                    li.contacts__item
+                        svg.contacts__svg(style={'height': '21px', 'width': '16px'})
+                            use(xlink:href='assets/img/icons/sprite.svg#map_marker')
+                        address.contacts__text
+                            | Новосибирск, ул. Инская, д.14
