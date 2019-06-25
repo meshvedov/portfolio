@@ -14,16 +14,12 @@
         }
     }
 
-    &__item {
-
-    }
-
-    &__link:hover &__svg {
-        fill: $color-green-light;
-    }
+    //&__link:hover &__svg {
+    //    fill: $color-green-light;
+    //}
     
     &__svg {
-        fill: #fff;
+        //fill: #fff;
         height: 1.06em;
         width: 1.875em;
         transition: fill .4s;
@@ -37,4 +33,25 @@
             width: 1.714em;
         }
     }
+}
+// Header
+.header-view {
+   fill: #fff;
+}
+
+.socials__link:hover .header-view {
+   fill: $color-green-light;
+}
+
+// Footer
+.footer-view {
+   fill: #a9acad;
+}
+
+.socials__link:hover .footer-view {
+   fill: #fff;
+}
+
+.footer-socials {
+   margin-top: 1.5em;
 }
