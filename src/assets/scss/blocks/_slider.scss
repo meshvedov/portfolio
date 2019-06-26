@@ -1,0 +1,22 @@
+.slider {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   height: 750px;
+
+   &__desc {
+      background-color: rgb(235,239,226);
+      flex: 1;
+      height: 750px;
+   }
+
+   &__work {
+      background-color: rgb(225,228,215);
+      flex-grow: 3;
+   }
+
+   &__buttons {
+      flex-grow: 1;
+   }
+
+}

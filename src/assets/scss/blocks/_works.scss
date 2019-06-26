@@ -18,6 +18,7 @@
    margin: 0 auto;
    width: 31.25em;
    height: 10em;
+   position: relative;
 
    @include respond(tab) {
       width: 26.3em;
