@@ -1,47 +1,15 @@
-include ../utils/mixins
+extends ../main-layout
 
-doctype html(lang='ru')
-head
-    meta(charset='UTF-8')
-    |
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    |
-    meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    |
-    link(rel='shortcut icon', type='image/png', href='fav_forest.png')
-    |
+block title
     title Portfolio | MSH
-body
-    // Header
-    header#header.header
-        .header__wrapper
-            nav.navigation
-                .socials
-                    ul.socials__list
-                        each val in ['vk', 'github', 'in']
-                            li.socials__item
-                                a.socials__link(href='#', target='_blank')
-                                    svg(class="socials__svg socials__svg--"+val)(class="header-view")
-                                        use(xlink:href='assets/img/icons/sprite.svg#'+val)
-                |
-                .menu
-                    a.menu__link(href='#')
-                        svg.menu__svg
-                            use(xlink:href='assets/img/icons/sprite.svg#hamburger')
-            |
-            .banner
-                img.banner__img(src='assets/img/fashmark-men-trends-nature.png', alt='Image')
-                |
-                h2.banner__name Владимир Астахов
-                |
-                p.banner__text Личный сайт веб разработчика
-                |
-                a.banner__link(href='#')
-                    svg.banner__arrow-down
-                        use(xlink:href='assets/img/icons/sprite.svg#arrow_down')
-        .header__decor
-            img(src='assets/img/decor/portfolio-header.png', alt="Portfolio")
-    |
+
+block name
+    h2.banner__name Владимир Астахов
+
+block slogan
+    p.banner__text Личный сайт веб разработчика
+
+block content
     //About
     section#about.about
         .about__triangles
@@ -80,7 +48,7 @@ body
     //Location
     section#location.location
         .location__wrapper
-            .location__map
+            .location__map //todo map
             .contacts
                 h2.contacts__title Контакты
                 ul.contacts__list
@@ -105,35 +73,4 @@ body
                         address.contacts__text
                             | Новосибирск, ул. Инская, д.14
             |
-            footer.footer
-                .footer-main
-                    .footer-main__description
-                        p.footer-main__description-text
-                            | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-                    .footer-main__nav
-                        -var links = ['Мои работы','Обо мне','Блог','Авторизация']
-                        ul.nav-menu
-                            each link in links
-                                li.nav-menu__item
-                                    a.nav-menu__link(href="#")= link
-                        .socials.footer-socials
-                            ul.socials__list
-                                each val in ['vk', 'github', 'in']
-                                    li.socials__item
-                                        a.socials__link(href='#', target='_blank')
-                                            svg(class="socials__svg socials__svg--" + val)(class="footer-view")
-                                                use(xlink:href='assets/img/icons/sprite.svg#' + val)
-                    .footer-main__quote
-                        blockquote
-                            | Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-                        p.sign
-                         | — Martin Golding
-
-                .footer__green
-                    .footer__green-block
-                        .footer__green-text
-                            | © Владимир Астахов &nbsp;
-                        .footer__green-text
-                            | | &nbsp;
-                        .footer__green-text
-                            | Создано с любовью в LoftSchool | 2019
+            include ../parts/footer

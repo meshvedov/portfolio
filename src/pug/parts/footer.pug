@@ -1,0 +1,32 @@
+footer.footer
+    .footer-main
+        .footer-main__description
+            p.footer-main__description-text
+                | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+        .footer-main__nav
+            -var links = ['Мои работы','Обо мне','Блог','Авторизация']
+            ul.nav-menu
+                each link in links
+                    li.nav-menu__item
+                        a.nav-menu__link(href="#")= link
+            .socials.footer-socials
+                ul.socials__list
+                    each val in ['vk', 'github', 'in']
+                        li.socials__item
+                            a.socials__link(href='#', target='_blank')
+                                svg(class="socials__svg socials__svg--" + val)(class="footer-view")
+                                    use(xlink:href='assets/img/icons/sprite.svg#' + val)
+        .footer-main__quote
+            blockquote
+                | Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+            p.sign
+                | — Martin Golding
+
+    .footer__green
+        .footer__green-block
+            .footer__green-text
+                | © Владимир Астахов &nbsp;
+            .footer__green-text
+                | | &nbsp;
+            .footer__green-text
+                | Создано с любовью в LoftSchool | 2019
