@@ -1,0 +1,39 @@
+.works {
+   position: relative;
+
+   &__triangles {
+      width: 100%;
+      display: flex;
+      position: absolute;
+      bottom: 100%;
+   }
+
+   &__header {
+      background-color: #f8f9f5;
+   }
+}
+
+.works-header {
+   background: url("/assets/img/decor/works-header.png") no-repeat center / contain;
+   margin: 0 auto;
+   width: 31.25em;
+   height: 10em;
+
+   @include respond(tab) {
+      width: 26.3em;
+      height: 8.3em;
+   }
+
+   @include respond(phone) {
+      width: 17.5em;
+      height: 5.7em;
+   }
+
+   &::after {
+      bottom: 1em;
+
+      @include respond(phone) {
+         bottom: 0;
+      }
+   }
+}
