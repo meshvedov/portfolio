@@ -27,6 +27,25 @@ block content
                 h1 Мои работы
         .slider
             .slider__desc
+                .slider__desc-block
+                    h2.slider__desc-header Сайт школы онлайн Образования
+                    p.slider__desc-text
+                     | Html, css, javascript
+                    a(href="#" class="slider__desc-link" target="_blank")
+                        img(src="/assets/img/link.png")
+                        span Посмотреть сайт
             .slider__work
+                img(src="/assets/img/big-work.png")
             .slider__buttons
+                .slider__buttons-arrow
+                    img(src="/assets/img/yoga.png")
+                    .svg-wrap
+                        svg
+                            use(xlink:href="assets/img/icons/sprite.svg#portf_arrow_down")
+                .slider__buttons-up
+                    .slider__buttons-arrow
+                        img(src="/assets/img/design-work.png")
+                        .svg-wrap
+                            svg
+                                use(xlink:href="assets/img/icons/sprite.svg#portf_arrow_up")
 
