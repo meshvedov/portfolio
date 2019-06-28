@@ -28,7 +28,7 @@
     width: 100%;
     text-align: center;
 
-    @include respond(phone) {
+    @include respond(tab) {
         & > img {
             display: none;
         }

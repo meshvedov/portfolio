@@ -1,7 +1,7 @@
 .slider {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr minmax(93px, 226px);
+   grid-template-rows: max-content max-content minmax(93px, max-content);
    min-height: 750px;
    height: 100vh;
 
@@ -15,12 +15,17 @@
       @include respond(tab) {
          grid-column: 1/-1;
          grid-row: 2/span 1;
+         padding: 3em;
       }
 
       &-block {
          margin: auto;
          max-width: 330px;
          text-align: center;
+
+         @include respond(tab) {
+            max-width: 100%;
+         }
       }
 
       &-header {
@@ -29,7 +34,7 @@
          text-transform: uppercase;
          color: $color-grey-light;
          line-height: 1.171;
-         margin-bottom: 3.625rem;
+         margin-bottom: 1.5em;
          position: relative;
 
          &::after {
@@ -38,9 +43,17 @@
             background-color: $color-grey-light;
             left: 50%;
             transform: translateX(-50%);
-            bottom: -1.3rem;
+            bottom: -.75em;
             width: 89px;
             height: 3px;
+         }
+
+         @include respond(tab) {
+            font-size: 30px;
+         }
+
+         @include respond(phone) {
+            font-size: 21px;
          }
       }
 
@@ -49,10 +62,18 @@
          text-transform: uppercase;
          color: $color-green-dark;
          line-height: 1.2;
-         margin-bottom: 3.625rem;
+         margin-bottom: 3.6em;
+
+         @include respond(tab) {
+            margin-bottom: calc(5vw - .3em);
+         }
       }
 
       &-link {
+         display: inline-block;
+      }
+
+      &-link-wrap {
          @extend %btn;
          border-radius: 45px;
          display: flex;

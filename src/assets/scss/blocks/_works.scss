@@ -28,6 +28,7 @@
    @include respond(phone) {
       width: 17.5em;
       height: 5.7em;
+      margin-bottom: .8em;
    }
 
    &::after {
