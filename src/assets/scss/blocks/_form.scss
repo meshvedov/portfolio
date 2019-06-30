@@ -1,0 +1,115 @@
+$form-color-bg: #DADBD6;
+
+.form {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: $form-color-bg;
+  opacity: 0.6;
+  overflow: hidden;
+
+  &__header {
+    font-family: SansusWeb;
+    text-transform: uppercase;
+    line-height: 1.171;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1.6em;
+
+    @include respond(small) {
+      font-size: 21px;
+    }
+
+    &::after {
+      content: '';
+      background-color: $color-grey-light;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -.7em;
+      width: 89px;
+      height: 3px;
+    }
+  }
+
+  &-wrapper {
+    padding: 2em 1em 1em;
+  }
+
+
+  &__input {
+    display: block;
+    width: 100%;
+    border-radius: 45px;
+    background-color: #ffffff;
+    opacity: 0.851;
+    border-width: 0;
+    font: 16px RobotoRegular;
+    padding: 1em;
+
+    @include respond(tab) {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    @include placeholder {
+      font: 16px RobotoRegular;
+
+      @include respond(tab) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    font: 16px RobotoRegular;
+    height: 8.75em;
+    border-radius: 22px;
+    padding: 1em;
+    border-width: 0;
+    resize: none;
+
+    @include respond(tab) {
+      font-size: 14px;
+    }
+
+    @include placeholder {
+      font: 16px RobotoRegular;
+
+      @include respond(tab) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    & > input:first-child {
+      border-right: 1px solid rgb(222, 227, 231);
+    }
+
+    & > input + input {
+      border-left: 1px solid rgb(222, 227, 231);
+    }
+  }
+
+  &__button {
+    flex: 1;
+    font: 16px RobotoMedium;
+    color: #ffffff;
+    background-color: $color-green-light;
+    height: 2.8em;
+    border: none;
+    transition: background-color .3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-green-dark;
+    }
+  }
+}

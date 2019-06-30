@@ -16,16 +16,16 @@
         @include respond(phone) {
             font-size: 35px;
         }
-    }
 
-    &::after {
-        content: '';
-        background-color: $color-grey-dark;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -1.25em;
-        width: 89px;
-        height: 3px;
+        &::after {
+            content: '';
+            background-color: $color-grey-dark;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -0.45em;
+            width: 89px;
+            height: 3px;
+        }
     }
 }

@@ -53,8 +53,15 @@
 
 // 1em = 16px
 @mixin respond($breakpoin) {
+
   @if $breakpoin == phone {
     @media only screen and (max-width:22.85em){ //320px
+      @content
+    };
+  }
+
+  @if $breakpoin == small {
+    @media screen and (max-width: 36em) { //576px
       @content
     };
   }
@@ -76,4 +83,11 @@
       @content
     };
   }
+}
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder { @content }
+  &::-moz-placeholder          { @content}/* Firefox 19+ */
+  &:-moz-placeholder           { @content }/* Firefox 18- */
+  &:-ms-input-placeholder      { @content }
 }

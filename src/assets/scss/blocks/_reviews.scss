@@ -1,0 +1,65 @@
+$review-color-text: #5D5A55;
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.2em;
+  margin-bottom: 3em;
+
+  @include respond(small) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.review {
+  text-align: center;
+  color: $review-color-text;
+  line-height: 1.625;
+
+  &__text {
+    font-family: RobotoLightItalic;
+    max-width: 390px;
+    text-align: left;
+    margin: 1em 0;
+    position: relative;
+
+    @include respond(tab) {
+      font-size: 14px;
+      max-width: 329px;
+      line-height: 1.714;
+    }
+
+    &::before {
+      position: absolute;
+      content: '“';
+      font-family: "Times New Roman";
+      font-size: 20em;
+      top: -.6em;
+      opacity: .2;
+      color: $color-green-light;
+    }
+  }
+
+  &__signature {
+    font-family: RobotoMediumItalic;
+    line-height: 1.5;
+
+    @include respond(small) {
+      font-size: 14px;
+    }
+
+    & > span {
+      color: $color-green-dark;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 1em;
+
+    @include respond(small) {
+      margin-right: 0;
+      margin-bottom: 3em;
+    }
+  }
+}

@@ -48,4 +48,41 @@ block content
                     a(href="#").svg-wrap
                         svg
                             use(xlink:href="assets/img/icons/sprite.svg#portf_arrow_up")
-
+    section#whatabout.what-about
+        .what-about__wrapper
+            img(src="/assets/img/list1.png").list1
+            img(src="/assets/img/list2.png").list2
+            img(src="/assets/img/list3.png").list3
+            .main-title.about-header.what-about__header
+                h1 Что обо мне говорят
+            .reviews
+                .review
+                    img(src="/assets/img/kov-dmitriy.png").review__pic
+                    p.review__text
+                     | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .review__signature
+                        span Ковальчук Дмитрий
+                        br
+                        | — основатель Loftschool
+                .review
+                    img(src="/assets/img/vladimir.png").review__pic
+                    p.review__text
+                        | Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                    .review__signature
+                        span Сабанцев Владимир
+                        br
+                        | — преподаватель
+            form.form.what-about-form
+                .form-wrapper
+                    h2.form__header Связаться со мной
+                    input(type="text" placeholder="Имя" required="required").form__input
+                    input(type="email" placeholder="Email" required="required").form__input
+                    textarea(placeholder="Ваше сообщение").form__textarea
+                .form__buttons
+                    input(type="submit" value="Отправить").form__button
+                    input(type="reset" value="Очистить").form__button
+            .what-about__arrow-up
+                svg
+                    use(xlink:href='assets/img/icons/sprite.svg#arrow_down')
+        |
+        include ../parts/footer
