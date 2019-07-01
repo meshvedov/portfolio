@@ -1,0 +1,45 @@
+.article {
+  max-width: 980px;
+
+  &__header {
+    font-family: SansusWeb;
+    font-weight: 400;
+
+    @include respond(tab) {
+      font-size: 30px;
+    }
+
+    @include respond(small) {
+      font-size: 21px;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    font-family: RobotoRegular;
+    font-size: 16px;
+    color: rgba(78, 136, 57, 0.702);
+    line-height: 2.563;
+    margin: .5em 0em;
+
+    @include respond(tab) {
+      font-size: 14px;
+      line-height: 1.714;
+    }
+  }
+
+  &__text {
+    font-family: RobotoRegular;
+    font-size: 16px;
+    color: rgb(69, 90, 100);
+    line-height: 1.625;
+    max-width: 880px;
+    margin-bottom: .6em;
+
+    @include respond(tab) {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+  }
+}
