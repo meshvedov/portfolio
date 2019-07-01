@@ -1,0 +1,32 @@
+extends ../main-layout
+
+block title
+    title Portfolio | Blog
+
+block name
+    h1.blog__header Блог
+
+block slogan
+    p.blog__slogan
+     | Статьи, которые я написал
+
+block content
+    section#blog.blog
+        .works__triangles
+            svg(
+            viewBox="0 0 1000 100"
+            preserveAspectRatio="none"
+            class="triangle triangle--beige-blog")
+                polygon(points="0,0 0,100 1000,100")
+            svg(
+            viewBox="0 0 1000 100"
+            preserveAspectRatio="none"
+            class="triangle triangle--beige-blog")
+                polygon(points="0,100 1000,100 1000,0")
+        .blog__wrapper
+            .blog__grid
+                .blog__aside
+                    -var menu=['Самое важное в SASS','Приёмы в вёрстке, без которых не обходится ни один сайт', 'Самый необходимый набор Gulp плагинов','Почему я выбрал Jade']
+                    +blog-menu(menu)
+                .blog__context
+

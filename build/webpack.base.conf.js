@@ -23,6 +23,7 @@ module.exports = {
     entry: {
         app: PATHS.src,
         // works: `${PATHS.src}/works.js`,
+        blog: `${PATHS.src}/blog.js`
     },
     output: {
         filename: `${PATHS.assets}js/[name].[hash].js`,

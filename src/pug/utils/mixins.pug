@@ -10,3 +10,16 @@ mixin skill(title, array)
                 svg.skills__item-svg
                     circle(r="44" cx="60" cy="60")
                     circle(r="44" cx="60" cy="60" class="skills__item-sector" style={'stroke-dashoffset':`${perc}`, 'opacity':`${opac}`})
+
+//------------------------------------------------------------------
+mixin banner-arrow()
+    a(href='#').banner__link
+        svg.banner__arrow-down
+            use(xlink:href='assets/img/icons/sprite.svg#arrow_down')
+
+//-------------------------------------------------------------------
+mixin blog-menu(titles)
+    each title in titles
+        ul.blog-menu
+            li.blog-menu__item
+                a(href="#").blog-menu__link= title

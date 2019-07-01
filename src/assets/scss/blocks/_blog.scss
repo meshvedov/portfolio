@@ -1,0 +1,92 @@
+$blog-color-bg: #faf8f0;
+
+.blog {
+   position: relative;
+   background-color: $blog-color-bg;
+   
+   &__header {
+      font-family:  SansusWeb;
+      font-weight: 400;
+      color: #fff;
+      text-transform: uppercase;
+      margin-top: .2em;
+      margin-bottom: .7em;
+      position: relative;
+
+      @include respond(tab) {
+         font-size: 49px;
+      }
+
+      @include respond(small) {
+         font-size: 35px;
+      }
+
+      &::after {
+         position: absolute;
+         content: '';
+         background-color: #fff;
+         width: 89px;
+         height: 3px;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -.3em;
+      }
+   }
+
+   &__slogan {
+      font-family: RobotoRegular;
+
+      @include respond(tab) {
+         font-size: 14px;
+      }
+   }
+
+   &__wrapper {
+      padding: 4.3em 3em;
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      grid-template-rows: max-content;
+   }
+
+   &__aside {
+      grid-column: 1/span 1;
+      grid-row: 1/-1;
+   }
+
+   &__context {
+      grid-column: 2/-1;
+      grid-row: 1/-1;
+   }
+}
+
+$blog-menu-color: rgb(69, 90, 100);
+
+.blog-menu {
+   font-family: RobotoRegular;
+
+   &__item {
+      text-align: right;
+
+   }
+
+   &__link {
+      display: block;
+      color: $blog-menu-color;
+      padding: .8em 1em .8em 0;
+      border-right: 3px solid transparent;
+      transition: all .2s;
+
+      &:hover {
+         border-right: 3px solid $color-green-light;
+         color: $color-green-light;
+         font-weight: 700;
+      }
+   }
+}
+
+.display-none {
+   display: none;
+}

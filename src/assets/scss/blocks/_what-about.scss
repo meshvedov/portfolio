@@ -28,7 +28,7 @@
         font-size: 49px;
       }
 
-      @media screen and (max-width: 576px) {
+      @include respond(small){
         font-size: 35px;
       }
     }
@@ -38,13 +38,12 @@
     display: block;
     text-align: center;
     transform: rotate(180deg);
+    margin: 0 auto;
     margin-top: 4.3em;
+    fill: #c1c3c1;
+    width: 26px;
+    height: 16px;
 
-    & > svg {
-      fill: #c1c3c1;
-      width: 26px;
-      height: 16px;
-    }
   }
 }
 

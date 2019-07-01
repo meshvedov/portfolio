@@ -51,6 +51,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "jquery": "^3.4.1",
     "pug": "^2.0.3",
     "svg-sprite-generator": "^0.0.7",
     "vue": "^2.6.10",

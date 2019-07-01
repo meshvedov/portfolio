@@ -8,6 +8,7 @@ block name
 
 block slogan
     p.banner__text Личный сайт веб разработчика
+    +banner-arrow
 
 block content
     section#my-works.works
@@ -81,8 +82,7 @@ block content
                 .form__buttons
                     input(type="submit" value="Отправить").form__button
                     input(type="reset" value="Очистить").form__button
-            .what-about__arrow-up
-                svg
-                    use(xlink:href='assets/img/icons/sprite.svg#arrow_down')
+            svg.what-about__arrow-up
+                use(xlink:href='assets/img/icons/sprite.svg#arrow_down')
         |
         include ../parts/footer
