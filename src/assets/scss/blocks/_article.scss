@@ -1,5 +1,15 @@
 .article {
   max-width: 980px;
+  padding-bottom: 4.5em;
+  position: relative;
+
+  @include respond(tab) {
+    padding-bottom: 3.3em;
+  }
+
+  @include respond(small) {
+    padding-bottom: 1.8em;
+  }
 
   &__header {
     font-family: SansusWeb;
@@ -40,6 +50,32 @@
       font-size: 14px;
       line-height: 1.5;
     }
+  }
 
+   &:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    background-color: rgb(55,62,66);
+    opacity: .071;
+    width: 681px;
+    height: 5px;
+
+     @include respond(tab-land) {
+       width: 100%;
+     }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3em;
+
+    @include respond(tab) {
+      margin-bottom: 1.8em;
+    }
+
+    @include respond(small) {
+      margin-bottom: .8em;
+    }
   }
 }

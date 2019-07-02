@@ -43,22 +43,52 @@ $blog-color-bg: #faf8f0;
 
    &__wrapper {
       padding: 4.3em 3em;
+
+      @include respond(tab) {
+         padding: 3.7em 1.7em;
+      }
+
+      @include respond(small){
+         padding: 1.7em .7em;
+      }
    }
 
    &__grid {
       display: grid;
-      grid-template-columns: 270px 1fr;
+      grid-template-columns: 270px minmax(min-content, max-content);
       grid-template-rows: max-content;
+      justify-content: center;
+      grid-column-gap: 8em;
+
+      @media screen and (max-width: 1799px) and (min-width: 1201px) {
+         grid-column-gap: calc(8vw - 1em);
+      }
+
+      @include respond(tab-land) {
+         grid-column-gap: 5em;
+      }
+
+      @include respond(tab) {
+         grid-template-columns: 1fr;
+      }
    }
 
    &__aside {
       grid-column: 1/span 1;
       grid-row: 1/-1;
+
+      @include respond(tab) {
+         display: none;
+      }
    }
 
    &__context {
       grid-column: 2/-1;
       grid-row: 1/-1;
+
+      @include respond(tab) {
+         grid-column: 1/-1;
+      }
    }
 }
 
