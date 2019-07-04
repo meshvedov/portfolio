@@ -42,7 +42,7 @@ $blog-color-bg: #faf8f0;
    }
 
    &__wrapper {
-      padding: 4.3em 3em;
+      padding: 4.3em 3em 0;
 
       @include respond(tab) {
          padding: 3.7em 1.7em;
