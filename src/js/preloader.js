@@ -26,21 +26,24 @@ var preloader = (function () {
     };
 
     var loadImages = function (images) {
+        let countImg = 0;
         if (!images.length)
             preloader.fadeOut();
         images.forEach(function (img, i, images) {
             var reg = /assets\/.*\.(jpg|png)/;
             var str = reg.exec(img);
-            console.log(str[0]);
-           var fakeImage = $('<img>', {
-               attr: {
-                   src: str[0]
-               }
-           });
-           fakeImage.on('load', function () {
-               percentsTotal++;
-               setPercent(images.length, percentsTotal);
-           });
+            if (str != null) {
+                console.log(str[0]);
+                var fakeImage = $('<img>', {
+                    attr: {
+                        src: str[0]
+                    }
+                });
+                fakeImage.on('load', function () {
+                    percentsTotal++;
+                    setPercent(++countImg, percentsTotal);
+                });
+            }
         });
     }
 
