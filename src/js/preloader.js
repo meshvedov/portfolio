@@ -29,7 +29,7 @@ var preloader = (function () {
         if (!images.length)
             preloader.fadeOut();
         images.forEach(function (img, i, images) {
-            var reg = /(assets\/.*[img|png])/;
+            var reg = /assets\/.*\.(jpg|png)/;
             var str = reg.exec(img);
             console.log(str[0]);
            var fakeImage = $('<img>', {
