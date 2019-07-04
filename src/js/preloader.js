@@ -52,8 +52,23 @@ var preloader = (function () {
         }
     }
 
-})();
+}());
+
+// ------- Slider ---------
+var slider = (function () {
+    var counter = 1,
+        duration = 300;
+    var moveSlide = function (container, direction) {
+
+    }
+    return {
+        init: function () {
+
+        }
+    }
+}());
 
 $(function () {
     preloader.init();
+    slider.init();
 });
