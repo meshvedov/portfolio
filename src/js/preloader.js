@@ -62,11 +62,19 @@ var slider = (function () {
     var counter = 1,
         duration = 300;
     var moveSlide = function (container, direction) {
-
+        var root = $(container);
+        if (counter >= 4) counter = 0;
+        root.find(".slide-active").removeClass("slide-active");
+        root.find(".slider__buttons-item").eq(counter).addClass("slide-active");
+        counter++;
     }
     return {
         init: function () {
+            $(".slider__buttons-arrow-down").on('click', function (e) {
+                e.preventDefault();
+                moveSlide(".slider-first", "down");
 
+            })
         }
     }
 }());
