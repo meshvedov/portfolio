@@ -1,9 +1,11 @@
 .slider {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: max-content max-content minmax(100px, calc(12vw - .5em));
-   //min-height: 750px;
-   //height: 100vh;
+   grid-template-rows: max-content max-content 225px;
+
+   @include respond(tab) {
+      grid-template-rows: max-content max-content 28vw;
+   }
 
    &__desc {
       grid-column: 1/span 1;
@@ -105,7 +107,6 @@
    &__buttons {
       grid-column: 2/-1;
       grid-row: 3/span 1;
-      //height: 100%;
       display: flex;
 
       @include respond(tab) {
@@ -130,20 +131,17 @@
          width: 100%;
          height: 100%;
          position: absolute;
-         top: -100%;
+         //top: -100%;
          left: 0;
          display: flex;
          justify-content: center;
          align-items: center;
+         //transition: top .4s;
       }
 
-      //.slider-first &-item {
-      //   top: -100%;
-      //}
-      //
-      //.slider-second &-item {
-      //   top: 100%;
-      //}
+      .slide-active {
+         top: 0;
+      }
 
       &-pic {
          max-height: 100%;
@@ -172,7 +170,10 @@
       }
    }
 }
+.slider-first > li {
+   top: -100%;
+}
 
-.slide-active {
-   top: 0;
+.slider-second > li {
+   top: 100%;
 }

@@ -60,21 +60,48 @@ var preloader = (function () {
 // ------- Slider ---------
 var slider = (function () {
     var counter = 1,
-        duration = 300;
+        duration = 300,
+        inProcess = false;
+
     var moveSlide = function (container, direction) {
-        var root = $(container);
+        var items = $(container).find(".slider__buttons-item"),
+            activeItem = items.filter('.slide-active'),
+            direct = direction == "down" ? 100 : -100;
+
         if (counter >= 4) counter = 0;
-        root.find(".slide-active").removeClass("slide-active");
-        root.find(".slider__buttons-item").eq(counter).addClass("slide-active");
-        counter++;
-    }
+
+        var reqItem = items.eq(counter);
+
+        activeItem.animate({top: direct + '%'});
+        reqItem.animate({top: 0}, function () {
+            activeItem.removeClass('slide-active').css('top', '-'+direct+'%');
+            $(this).addClass('slide-active');
+            inProcess = false;
+        });
+
+    };
     return {
         init: function () {
-            $(".slider__buttons-arrow-down").on('click', function (e) {
+            $(".slider__buttons-arrow-down, .slider__buttons-arrow-up").on('click', function (e) {
                 e.preventDefault();
-                moveSlide(".slider-first", "down");
 
-            })
+                if (!inProcess) {
+                    moveSlide(".slider-first", "down");
+                    moveSlide(".slider-second", "up");
+                    counter++;
+                    inProcess = true;
+                }
+
+            });
+        }
+    }
+}());
+
+var slideShow = (function () {
+
+    return {
+        init: function () {
+            
         }
     }
 }());
