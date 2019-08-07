@@ -98,15 +98,26 @@ var slider = (function () {
 }());
 
 var slideShow = (function () {
+    let arrowDown = document.querySelector('.slider__buttons-arrow-down');
+    let slides = document.querySelectorAll('.slider__buttons-item');
+
+
 
     return {
         init: function () {
-            
+            arrowDown.addEventListener('click', (e) => {
+                e.preventDefault();
+                let activeSlide = document.querySelector('.slide-active');
+                activeSlide.style.top = '100%';
+                activeSlide.classList.remove('slide-active');
+
+            });
         }
     }
 }());
 
 $(function () {
     preloader.init();
-    slider.init();
+    // slider.init();
+    slideShow.init();
 });
