@@ -37,12 +37,25 @@ block content
                             img(src="/assets/img/link.png")
                             span Посмотреть сайт
             .slider__work
-                img(src="/assets/img/big-work.png")
+                //img(src="/assets/img/big-work.png")
+                ul.slider__work-list
+                    li.slider__work-item
+                        img(src="/assets/img/slider/yoga.png").slider__buttons-pic
+                    li.slider__work-item
+                        img(src="/assets/img/mockup1800.png").slider__buttons-pic
+                    li.slider__work-item
+                        img(src="/assets/img/slider/1.jpeg").slider__buttons-pic
+                    li.slider__work-item
+                        img(src="/assets/img/slider/2.jpeg").slider__buttons-pic
+                    li.slider__work-item
+                        img(src="/assets/img/slider/3.jpeg").slider__buttons-pic
             .slider__buttons
                 .slider__buttons-arrow
                     ul.slider__buttons-works.slider-first
-                        li.slider__buttons-item.slide-active
+                        li.slider__buttons-item
                             img(src="/assets/img/slider/yoga.png").slider__buttons-pic
+                        li.slider__buttons-item
+                            img(src="/assets/img/mockup1800.png").slider__buttons-pic
                         li.slider__buttons-item
                             img(src="/assets/img/slider/1.jpeg").slider__buttons-pic
                         li.slider__buttons-item
@@ -55,6 +68,8 @@ block content
                             use(xlink:href="assets/img/icons/sprite.svg#arrow_down")
                 .slider__buttons-arrow
                     ul.slider__buttons-works.slider-second
+                        li.slider__buttons-item
+                            img(src="/assets/img/slider/yoga.png").slider__buttons-pic
                         li.slider__buttons-item.slide-active
                             img(src="/assets/img/mockup1800.png").slider__buttons-pic
                         li.slider__buttons-item

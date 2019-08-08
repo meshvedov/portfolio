@@ -98,20 +98,57 @@ var slider = (function () {
 }());
 
 var slideShow = (function () {
+    let ind = 0;
     let arrowDown = document.querySelector('.slider__buttons-arrow-down');
-    let slides = document.querySelectorAll('.slider__buttons-item');
+    let arrowUp = document.querySelector('.slider__buttons-arrow-up');
+    let sliderFirst = document.querySelector('.slider-first');
+    let sliderSecond = document.querySelector('.slider-second');
+    let slidesSecond = sliderSecond.querySelectorAll('.slider__buttons-item');
+    let slidesFirst = sliderFirst.querySelectorAll('.slider__buttons-item');
+    
+    function hideSlides() {
+        let slides = document.querySelectorAll('.slider__work-item');
+        slides.forEach(slide => slide.style.display = 'none');
+        slides[0].style.display = 'block';
+    }
+    hideSlides();
 
+    function moveBigSlide(i) {
 
+    }
+
+    function moveSlide(element, direct, i) {
+        let direction = direct === 'down' ? '100%' : '-100%';
+        let activeSlide = element.querySelector('.slide-active');
+        activeSlide = activeSlide === null ? element.children()[i] : activeSlide;
+        activeSlide.classList.remove('slide-active');
+        activeSlide.style.top = direction;
+        let slides = element.querySelectorAll('.slider__buttons-item');
+        let nextSlide = slides[i];
+        // let nextSlide = direct === 'down' ? slides[++ind] : slides[--ind];
+
+        nextSlide.classList.add('slide-active');
+    }
 
     return {
         init: function () {
             arrowDown.addEventListener('click', (e) => {
                 e.preventDefault();
-                let activeSlide = document.querySelector('.slide-active');
-                activeSlide.style.top = '100%';
-                activeSlide.classList.remove('slide-active');
-
+                // debugger;
+                if (ind < slidesFirst.length - 1) {
+                    moveSlide(sliderFirst, 'down', ind);
+                    moveBigSlide(++ind);
+                    moveSlide(sliderSecond, 'up', ++ind);
+                }
             });
+
+            arrowUp.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                if (ind > 0) {
+                    moveSlide(sliderFirst, 'up', --ind);
+                }
+            })
         }
     }
 }());
