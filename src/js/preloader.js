@@ -12,7 +12,7 @@ var preloader = (function () {
         if (img) {
             path = $(element).attr('src');
         }
-        if(path)
+        if (path)
             return path;
     });
 
@@ -57,7 +57,8 @@ var preloader = (function () {
 
 }());
 
-// ------- Slider ---------
+// ------- Slider --------------------------------------------------------------
+
 var slider = (function () {
     var counter = 1,
         duration = 300,
@@ -74,7 +75,7 @@ var slider = (function () {
 
         activeItem.animate({top: direct + '%'});
         reqItem.animate({top: 0}, function () {
-            activeItem.removeClass('slide-active').css('top', '-'+direct+'%');
+            activeItem.removeClass('slide-active').css('top', '-' + direct + '%');
             $(this).addClass('slide-active');
             inProcess = false;
         });
@@ -98,36 +99,45 @@ var slider = (function () {
 }());
 
 var slideShow = (function () {
-    let ind = 0;
-    let arrowDown = document.querySelector('.slider__buttons-arrow-down');
-    let arrowUp = document.querySelector('.slider__buttons-arrow-up');
-    let sliderFirst = document.querySelector('.slider-first');
-    let sliderSecond = document.querySelector('.slider-second');
-    let slidesSecond = sliderSecond.querySelectorAll('.slider__buttons-item');
-    let slidesFirst = sliderFirst.querySelectorAll('.slider__buttons-item');
-    
-    function hideSlides() {
+    let arrowDown = document.querySelector('.slider__buttons-arrow-down'),
+        arrowUp = document.querySelector('.slider__buttons-arrow-up'),
+        sliderFirst = document.querySelector('.slider-first'),
+        sliderSecond = document.querySelector('.slider-second'),
+        slidesSecond = sliderSecond.querySelectorAll('.slider__buttons-item'),
+        slidesFirst = sliderFirst.querySelectorAll('.slider__buttons-item'),
+        sliderWorkList = document.querySelector('.slider__work-list'),
+        slidesWork = sliderWorkList.querySelectorAll('.slider__work-item'),
+        ind1 = 0, ind2 = 1, ind3 = 2, countSlides = slidesWork.length;
+
+
+    function hideBigSlides(i) {
         let slides = document.querySelectorAll('.slider__work-item');
+
         slides.forEach(slide => slide.style.display = 'none');
-        slides[0].style.display = 'block';
+        slides[i].style.display = 'block';
     }
-    hideSlides();
 
-    function moveBigSlide(i) {
+    hideBigSlides(ind2);
 
+    function showBigSlide(i) {
+        let activeBigSlide = sliderWorkList.querySelector("li[style='display: block;']");
+        activeBigSlide.style.display = 'none';
+        slidesWork[i].style.display = 'block';
     }
 
     function moveSlide(element, direct, i) {
-        let direction = direct === 'down' ? '100%' : '-100%';
-        let activeSlide = element.querySelector('.slide-active');
-        activeSlide = activeSlide === null ? element.children()[i] : activeSlide;
+        let direction = direct === 'down' ? '100%' : '-100%',
+            activeSlide = element.querySelector('.slide-active'),
+            slides = element.querySelectorAll('.slider__buttons-item'),
+            nextSlide = slides[i];
+
+        activeSlide = activeSlide === null ? element.children[i] : activeSlide;
         activeSlide.classList.remove('slide-active');
         activeSlide.style.top = direction;
-        let slides = element.querySelectorAll('.slider__buttons-item');
-        let nextSlide = slides[i];
-        // let nextSlide = direct === 'down' ? slides[++ind] : slides[--ind];
 
-        nextSlide.classList.add('slide-active');
+        if (nextSlide !== undefined) {
+            nextSlide.classList.add('slide-active');
+        }
     }
 
     return {
@@ -135,18 +145,32 @@ var slideShow = (function () {
             arrowDown.addEventListener('click', (e) => {
                 e.preventDefault();
                 // debugger;
-                if (ind < slidesFirst.length - 1) {
-                    moveSlide(sliderFirst, 'down', ind);
-                    moveBigSlide(++ind);
-                    moveSlide(sliderSecond, 'up', ++ind);
+                if (ind1 < countSlides - 2) {
+                    moveSlide(sliderFirst, 'down', ++ind1);
+                }
+
+                if (ind2 < countSlides - 1) {
+                    showBigSlide(++ind2);
+                }
+
+                if (ind3 < countSlides) {
+                    moveSlide(sliderSecond, 'up', ++ind3);
                 }
             });
 
             arrowUp.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                if (ind > 0) {
-                    moveSlide(sliderFirst, 'up', --ind);
+                if (ind1 > -1) {
+                    moveSlide(sliderFirst, 'up', --ind1);
+                }
+
+                if (ind2 > 0) {
+                    showBigSlide(--ind2);
+                }
+
+                if (ind3 > 1) {
+                    moveSlide(sliderSecond, 'down', --ind3);
                 }
             })
         }
