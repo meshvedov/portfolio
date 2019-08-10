@@ -103,8 +103,6 @@ var slideShow = (function () {
         arrowUp = document.querySelector('.slider__buttons-arrow-up'),
         sliderFirst = document.querySelector('.slider-first'),
         sliderSecond = document.querySelector('.slider-second'),
-        slidesSecond = sliderSecond.querySelectorAll('.slider__buttons-item'),
-        slidesFirst = sliderFirst.querySelectorAll('.slider__buttons-item'),
         sliderWorkList = document.querySelector('.slider__work-list'),
         slidesWork = sliderWorkList.querySelectorAll('.slider__work-item'),
         ind1 = 0, ind2 = 1, ind3 = 2, countSlides = slidesWork.length;

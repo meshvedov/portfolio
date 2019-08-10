@@ -177,3 +177,17 @@
 .slider-second > li {
    top: 100%;
 }
+
+.slider-pic {
+   animation: scaleImg .5s;
+}
+
+@keyframes scaleImg {
+   0% {
+      transform: scale(0.2);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
