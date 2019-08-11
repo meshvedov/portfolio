@@ -67,7 +67,7 @@ var slider = (function () {
     var moveSlide = function (container, direction) {
         var items = $(container).find(".slider__buttons-item"),
             activeItem = items.filter('.slide-active'),
-            direct = direction == "down" ? 100 : -100;
+            direct = direction === "down" ? 100 : -100;
 
         if (counter >= 4) counter = 0;
 

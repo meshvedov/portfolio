@@ -36,49 +36,27 @@ block content
                         .slider__desc-link-wrap
                             img(src="/assets/img/link.png")
                             span Посмотреть сайт
+            |
+            - var slides = ['/assets/img/slider/yoga.png',
+            -                '/assets/img/mockup1800.png',
+            -                '/assets/img/slider/1.jpeg',
+            -                '/assets/img/slider/2.jpeg',
+            -                '/assets/img/slider/3.jpeg']
             .slider__work
-                //img(src="/assets/img/big-work.png")
                 ul.slider__work-list
-                    li.slider__work-item
-                        img(src="/assets/img/slider/yoga.png").slider-pic
-                    li.slider__work-item
-                        img(src="/assets/img/mockup1800.png").slider-pic
-                    li.slider__work-item
-                        img(src="/assets/img/slider/1.jpeg").slider-pic
-                    li.slider__work-item
-                        img(src="/assets/img/slider/2.jpeg").slider-pic
-                    li.slider__work-item
-                        img(src="/assets/img/slider/3.jpeg").slider-pic
+                    each val in slides
+                        li.slider__work-item
+                            img(src= val).slider-pic
             .slider__buttons
                 .slider__buttons-arrow
-                    ul.slider__buttons-works.slider-first
-                        li.slider__buttons-item.slide-active
-                            img(src="/assets/img/slider/yoga.png").slider__buttons-pic
-                        li.slider__buttons-item
-                            img(src="/assets/img/mockup1800.png").slider__buttons-pic
-                        li.slider__buttons-item
-                            img(src="/assets/img/slider/1.jpeg").slider__buttons-pic
-                        li.slider__buttons-item
-                            img(src="/assets/img/slider/2.jpeg").slider__buttons-pic
-                        li.slider__buttons-item
-                            img(src="/assets/img/slider/3.jpeg").slider__buttons-pic
+                    +slidesButtonShow(0)(class='slider__buttons-works slider-first')
                     |
                     a(href="#").svg-wrap.slider__buttons-arrow-down
                         svg
                             use(xlink:href="assets/img/icons/sprite.svg#arrow_down")
                 .slider__buttons-arrow
-                    ul.slider__buttons-works.slider-second
-                        li.slider__buttons-item
-                            img(src="/assets/img/slider/yoga.png").slider__buttons-pic
-                        li.slider__buttons-item
-                            img(src="/assets/img/mockup1800.png").slider__buttons-pic
-                        li.slider__buttons-item.slide-active
-                            img(src="/assets/img/slider/1.jpeg").slider__buttons-pic
-                        li.slider__buttons-item
-                            img(src="/assets/img/slider/2.jpeg").slider__buttons-pic
-                        li.slider__buttons-item
-                            img(src="/assets/img/slider/3.jpeg").slider__buttons-pic
-
+                    +slidesButtonShow(2)(class='slider__buttons-works slider-second')
+                    |
                     a(href="#").svg-wrap.slider__buttons-arrow-up
                         svg
                             use(xlink:href="assets/img/icons/sprite.svg#arrow_down")
