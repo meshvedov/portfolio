@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "svg-sprite-generator": "^0.0.7",
     "vue": "^2.6.10",
     "vuex": "^3.1.1"
